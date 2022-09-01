@@ -11,6 +11,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 //MEDIA QUERY MANAGER
 /*
 0-600px:     phone
@@ -19,13 +20,6 @@
 1200-1800:   normal
 1800px + :   Big-desktop
 */
-
-/*
-$breakpoint argument choices:
--phone
--tab-port
--tab-land
--big desktop
 
 @mixin respond($breakpoint) {
   @if $breakpoint ==phone {
@@ -49,4 +43,3 @@ $breakpoint argument choices:
     } //1800px
   }
 }
-*/
