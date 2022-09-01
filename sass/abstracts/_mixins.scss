@@ -16,9 +16,8 @@
 0-600px:     phone
 600-900px:   tablet portrait
 900-1200px:  tablet landscape
-1200-1800    normal
-1800px + :   Big desktop
-
+1200-1800:   normal
+1800px + :   Big-desktop
 */
 
 /*
@@ -27,7 +26,7 @@ $breakpoint argument choices:
 -tab-port
 -tab-land
 -big desktop
-*/
+
 @mixin respond($breakpoint) {
   @if $breakpoint ==phone {
     @media (max-width: 37.5em) {
@@ -50,3 +49,4 @@ $breakpoint argument choices:
     } //1800px
   }
 }
+*/
