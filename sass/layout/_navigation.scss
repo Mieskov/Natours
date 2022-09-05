@@ -17,6 +17,15 @@
     z-index: 15;
     box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
     cursor: pointer;
+
+    @include respond(tab-port) {
+      top: 3rem;
+      right: 4rem;
+    }
+    @include respond(phone) {
+      top: 2rem;
+      right: 3rem;
+    }
   }
 
   // .navigation__background
@@ -34,6 +43,15 @@
     );
     z-index: 10;
     transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+    @include respond(tab-port) {
+      top: 3rem;
+      right: 4.5rem;
+    }
+
+    @include respond(phone) {
+      top: 2.5rem;
+      right: 3.8rem;
+    }
   }
 
   &__nav {
