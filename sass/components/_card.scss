@@ -3,6 +3,10 @@
   -moz-perspective: 150rem;
   position: relative;
   height: 52rem;
+  @include respond(tab-port) {
+    width: 70%;
+    margin: 0 auto;
+  }
   &__side {
     height: 52rem;
     transition: all 0.8s ease;
