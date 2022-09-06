@@ -422,6 +422,34 @@ html {
   .card__price-value {
     font-size: 6rem;
     font-weight: 200; }
+  @media (max-width: 56.25em) {
+    .card {
+      height: auto;
+      background-color: white;
+      border-radius: 3px;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+      .card__side {
+        height: auto;
+        position: relative;
+        box-shadow: none; }
+        .card__side--back {
+          transform: rotateY(0deg);
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%); }
+      .card:hover .card__side--front {
+        transform: rotateY(0deg); }
+      .card__ditails {
+        padding: 1rem 3rem; }
+      .card__cta {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        padding: 7rem 4rem 4rem 4rem; }
+      .card__price-box {
+        margin-bottom: 3rem; }
+      .card__price-value {
+        font-size: 4rem; } }
 
 .story {
   width: 75%;
@@ -434,7 +462,11 @@ html {
   transform: skewX(-12deg); }
   @media (max-width: 56.25em) {
     .story {
-      width: 98%; } }
+      width: 100%;
+      padding: 2rem 3rem; } }
+  @media (max-width: 37.5em) {
+    .story {
+      transform: skewX(0deg); } }
   .story__shape {
     width: 15rem;
     height: 15rem;
@@ -443,12 +475,18 @@ html {
     shape-outside: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     position: relative; }
+    @media (max-width: 37.5em) {
+      .story__shape {
+        transform: translateX(-3rem) skewX(0deg); } }
   .story__img {
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
     transition: all 0.5s; }
   .story__text {
     transform: skewX(12deg); }
+    @media (max-width: 37.5em) {
+      .story__text {
+        transform: skewX(0deg); } }
   .story__caption {
     position: absolute;
     top: 50%;
@@ -912,18 +950,28 @@ html {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 50%), url(../img/nat-10.jpg);
   background-size: cover;
   border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
-  height: 50rem; }
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
   .book__form {
     width: 50%;
     padding: 6rem; }
     @media (max-width: 56.25em) {
       .book__form {
-        width: 65%;
-        padding: 6rem; } }
+        width: 65%; } }
+    @media (max-width: 37.5em) {
+      .book__form {
+        width: 70%;
+        padding: 3rem; } }
   @media (max-width: 56.25em) {
     .book {
       background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.5) 65%, transparent 65%), url(../img/nat-10.jpg);
       background-size: cover;
       border-radius: 3px;
       box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); } }
+
+.book .btn--green {
+  margin-bottom: 4rem;
+  word-spacing: 0.3rem;
+  background-color: #55c57a;
+  color: #fff; }
+  .book .btn--green::after {
+    background-color: #55c57a; }
