@@ -554,7 +554,7 @@ html {
       clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); } }
   @media (max-width: 37.5em) {
     .header {
-      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
+      clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%); } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -567,6 +567,9 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+  @media (max-width: 37.5em) {
+    .header {
+      height: 70vh; } }
 
 .navigation__checkbox {
   display: none; }
