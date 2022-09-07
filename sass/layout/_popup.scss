@@ -29,16 +29,27 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(0);
     transition: all 0.5s 0.2s;
+    @include respond(tab-land) {
+      display: block;
+    }
   }
 
   &__left {
     width: 33.33333%;
     display: table-cell;
+    @include respond(tab-land) {
+      width: 50%;
+      display: inline;
+    }
   }
 
   &__img {
     display: block;
     width: 100%;
+    @include respond(tab-land) {
+      width: 49%;
+      display: inline;
+    }
   }
 
   &__right {
@@ -47,6 +58,10 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+    @include respond(tab-land) {
+      width: 100%;
+      display: inline-block;
+    }
   }
 
   &__text {
@@ -57,6 +72,11 @@
     column-rule: 1px solid $color-grey-light-2;
     -webkit-hyphens: auto;
     hyphens: auto;
+    @include respond(phone) {
+      column-count: 1;
+      column-gap: none;
+      column-rule: none;
+    }
   }
 
   &__close {
@@ -70,6 +90,18 @@
       display: inline-block;
       text-decoration: none;
       transition: all 0.2s;
+      @include respond(tab-land) {
+        top: 1rem;
+        right: 4rem;
+      }
+      @include respond(tab-port) {
+        top: 0rem;
+        right: 3rem;
+      }
+      @include respond(phone) {
+        top: 0rem;
+        right: 1.5rem;
+      }
     }
     &:hover {
       color: $color-primary;
